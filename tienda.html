@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FrontEnd Store</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/estilos.css">
+    </head>
+    <body>
+        <header class="contenedor">
+            <img src="./src/img/logo.png" alt='logo'>
+        </header>
+
+        <nav class="navegacion">
+            <a href="index.html">Tienda</a>
+            <a href="nosotros.html">Nosotros</a>
+        </nav>
+        
+        <main class='contenedor'>
+            <h2>VueJs</h2>
+            
+            <form action="#" method="post">
+
+            <div class="prenda">
+                <div class="prenda__imagen">
+                    <img src="/src/img/1.jpg" alt="1">
+                </div>
+
+                <p class="prenda__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quas similique exercitationem! Mollitia dolores quibusdam impedit illum aspernatur quod, debitis reprehenderit? Deleniti qui maiores deserunt labore atque quas sint officiis?</p>
+                <div class="prenda__info">
+                    <select class="prenda__info__genero">
+                        <option disabled selected>-- Seleccione su talla --</option>
+                        <option value="s">Pequeña</option>
+                        <option value="m">mediana</option>
+                        <option value="g">grande</option>
+                    </select>
+
+                    <input type="number" class="prenda__info__cantidad" min="0" max="1000" hover="cantidad" placeholder="0">
+                    
+                    <a href="#" class="boton">
+                        agregar al carrito
+                    </a>
+                </div><!-- fin info prenda-->
+
+            </div><!-- fin prenda -->
+
+        </form>
+
+        </main>
+
+        <footer class="footer">
+            <p class="footer__licencia">FrontEnd Store - Todos los derechos reservados</p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,267 @@
+:root{
+    --Color_fondo:#890fa3;
+    --Color_fondo_oscuro:#65027c;
+    --blanco:#fff;
+    --amarillo:#fdce00;
+    --fuente:'Staatliches', cursive;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+    color:var(--blanco);
+}
+
+.margen{
+    margin:0;
+}
+
+body{
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: var(--Color_fondo);
+    font-family: var(--fuente);
+}
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    width:100rem;
+    margin:0 auto;
+    max-width: 95%;
+}
+
+h2, h3{
+    color:var(--amarillo);
+}
+
+p{
+    color:var(--blanco);
+    text-align: justify;
+    margin:0;
+    line-height: 1.5;
+}
+
+header{
+    padding:5rem 0;
+}
+
+/**************************************************** navegacion*/
+
+.navegacion{
+    background-color: var(--Color_fondo_oscuro) ;
+    display: flex;
+    gap:2rem;
+    justify-content: center;
+}
+.navegacion a{
+    text-transform: uppercase;
+    font-size: 2rem;
+    transition: all 6ms ease;
+    padding:1.5rem;
+}
+
+.navegacion a:hover,
+.selected{
+    color:var(--amarillo);
+    background-color: var(--Color_fondo);
+}
+
+/******************************************** Contenido principal */
+
+.camisetas{
+    padding-left: 0;
+    display: grid;
+}
+
+li{
+
+    list-style: none;
+}
+
+
+.camiseta{
+    padding:1rem;
+    background-color: var(--Color_fondo_oscuro);
+}
+
+.camiseta__info__nombre{
+    color:var(--blanco);
+    font-size:2.5rem;
+    text-align: center;
+}
+
+.camiseta__info__precio{
+    color:var(--amarillo);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.camisetas{
+    display: grid;
+    gap:1rem 
+}
+
+.grafico1{
+    grid-row:4/5 ;
+}
+
+.grafico2{
+    grid-row:13/14 ;
+}
+
+@media only screen and (min-width:350px){
+    .camisetas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   .grafico1{
+        grid-row:3/4 ;
+        grid-column: 1/3;
+    }
+    
+    .grafico2{
+        grid-row:8/9;
+        grid-column: 1/3;
+    }
+}
+
+@media only screen and (min-width:700px){
+    .camisetas{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+   .grafico1{
+        grid-row:2/3 ;
+        grid-column: 1/3;
+    }
+    
+    .grafico2{
+        grid-row:5/6;
+        grid-column: 2/4;
+    }
+}
+
+/************************************************* pagina nosotros */
+
+.nosotros, .prenda{
+    padding: 1rem;
+}
+.nosotros p{
+    padding-bottom: 2rem;
+}
+
+.nosotros{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    justify-content: space-around;
+
+}
+
+@media only screen and (min-width:768px){
+    .nosotros{
+        flex-direction: row;
+    }
+
+    .nosotros__texto{
+        flex-basis: calc(50%);
+    }
+}
+
+
+
+.solapa_ventajas{
+    padding:2rem 2rem 4rem 2rem;
+}
+
+.ventajas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:2rem;
+
+}
+
+
+@media only screen and (min-width:768px){
+    .ventajas{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/******************************************************* pagina tienda */
+
+@media only screen and (min-width:768px){
+
+    .prenda{
+        margin:0 auto;
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        align-items: top center;
+        column-gap:1rem;
+        justify-content: space-between;
+    }
+
+    .prenda__imagen{
+        grid-row:1/5;
+    }
+}
+
+
+.prenda__info{
+    padding:1rem 0;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.prenda__info__genero,
+.prenda__info__cantidad{
+    background: none;
+    color:var(--blanco);
+    border: 4px solid var(--Color_fondo_oscuro);
+    text-align: center;
+    padding: .5rem 0;
+}
+
+
+.boton{
+    background-color: var(--amarillo);
+    padding: 1rem;
+    margin:1rem 0;
+    grid-column: 1/3;
+    transition: all .4s ease-in-out;
+}
+.boton:hover{
+    background-color: #ce8d00;
+    color:#65027c;
+}
+
+
+/*footer*/
+
+.footer{
+    background-color: var(--Color_fondo_oscuro);
+    align-items: center;
+}
+.footer__licencia{
+    padding: 1rem 0;
+    margin:0;
+    text-align: center;
+}
